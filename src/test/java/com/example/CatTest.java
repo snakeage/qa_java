@@ -31,7 +31,7 @@ public class CatTest {
     }
 
     @Test
-    void getFood_throwsException_ifFelineThrows() throws Exception {
+    void getFoodThrowsExceptionIfFelineThrows() throws Exception {
         Cat cat = new Cat(feline);
         when(feline.eatMeat()).thenThrow(new Exception("Ошибка"));
         Exception exception = assertThrows(Exception.class, cat::getFood);
